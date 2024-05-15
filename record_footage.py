@@ -1,7 +1,7 @@
 import cv2
 cap = cv2.VideoCapture(0)
 
-filename_start = 'test'
+filename_start = 'slightly-slanted-angle'
 counter = 0
 while True:
     ret, frame = cap.read()
