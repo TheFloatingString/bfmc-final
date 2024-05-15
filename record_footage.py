@@ -4,7 +4,7 @@ import time
 
 cap = cv2.VideoCapture(0)
 
-filename_start = 'exposure-ms-50-features'
+filename_start = 'exposure-ms-100-features'
 counter = 0
 start = time.time()
 for i in range(500):
