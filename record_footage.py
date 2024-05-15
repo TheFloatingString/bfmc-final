@@ -4,10 +4,10 @@ import time
 
 cap = cv2.VideoCapture(0)
 
-filename_start = 'exposure-ms-50'
+filename_start = 'exposure-ms-50-features'
 counter = 0
 start = time.time()
-for i in range(50):
+for i in range(500):
     ret, frame = cap.read()
     cv2.imwrite(f'data/{filename_start}_{counter}.png', frame)
     counter += 1
