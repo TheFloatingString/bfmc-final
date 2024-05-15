@@ -1,7 +1,9 @@
 import cv2
+import subprocess
+
 cap = cv2.VideoCapture(0)
 
-filename_start = 'slightly-slanted-angle'
+filename_start = 'exposure-40-'
 counter = 0
 while True:
     ret, frame = cap.read()
