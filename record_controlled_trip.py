@@ -1,14 +1,17 @@
 import serial
 from threading import Thread
 import cv2
+import subprocess
 
 def record_camera():
     counter = 0
     filename_start='full-course'
     cap = cv2.VideoCapture(0)
+    subprocess.run("v4l2-ctl -c auto_exposure=1", shell=True)
+    subprocess.run("v4l2-ctl -c exposure_time_absolute=100", shell=True)
     while True:
         ret, frame = cap.read()
-        cv2.imwrite(f'data/{filename_start}_{counter}.png', frame)        
+        cv2.imwrite(f'data/a-{filename_start}_{counter}.png', frame)        
         counter += 1
 
 def controller():
